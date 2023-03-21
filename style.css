@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+:root {
+	--orange: hsl(25, 97%, 53%);
+	--white: hsl(0, 0%, 100%);
+	--ltgrey: hsl(217, 12%, 63%);
+	--mdgrey: hsl(216, 12%, 54%);
+	--ltblue: hsl(213, 19%, 18%);
+	--dkblue: hsl(213, 19%, 12%);
+	--verydkblue: hsl(216, 12%, 8%);
+	--fw-700: 700;
+	--fw-400: 400;
+}
+
+* {
+	font-family: "Overpass", sans-serif;
+	font-size: 15px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style added by  me */
+
+.container {
+	background: var(--verydkblue);
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	background: var(--dkblue);
+	color: var(--mdgrey);
+	padding: 2rem;
+	border-radius: 25px;
+	width: 80%;
+	max-width: 375px;
+}
+@media (max-width: 25rem) {
+	.card {
+		width: 70%;
+	}
+}
+/* .wrapper {
+	display: none;
+} */
+.hidden {
+	display: none;
+}
+
+.main-title {
+	margin: 2rem 0 1rem 0;
+	color: var(--white);
+	font-size: 1.5rem;
+	font-weight: var(--fw-700);
+	letter-spacing: 0.1em;
+}
+@media (max-width: 25rem) {
+	.main-title {
+		font-size: 1.3rem;
+	}
+	.main-para {
+		font-size: 0.78rem;
+	}
+}
+.main-para {
+	margin-bottom: 1.5rem;
+	line-height: 1.8;
+	font-weight: var(--fw-700);
+}
+.rankings {
+	margin-bottom: 1.8rem;
+	display: flex;
+	justify-content: space-between;
+}
+/* .ranking {
+	margin-bottom: 1rem;
+} */
+.ranking:hover {
+	color: var(--white);
+	background: var(--ltgrey);
+	cursor: pointer;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.star {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 45px;
+	width: 45px;
+	padding: 0.5rem;
+	background: var(--ltblue);
+	border-radius: 50%;
+	color: var(--mdgrey);
+	font-weight: var(--fw-700);
+}
+@media (max-width: 25rem) {
+	.one,
+	.two,
+	.three,
+	.four,
+	.five,
+	.star {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+.active {
+	color: white;
+	background: var(--orange);
+}
+
+.submit {
+	color: var(--white);
+	background: var(--orange);
+	border-radius: 50px;
+	padding: 1rem;
+	text-transform: uppercase;
+	width: 23rem;
+	max-width: 100%;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	font-weight: var(--fw-700);
+}
+
+@media (max-width: 25rem) {
+	.submit {
+		width: 17rem;
+	}
+}
+.submit:active,
+.submit:hover {
+	color: var(--orange);
+	background: var(--white);
+	cursor: pointer;
+}
+
+.results:active {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feedback {
+	margin: 1.5rem 0;
+	padding: 1rem 0.875rem;
+	background: var(--ltblue);
+	color: var(--orange);
+	border-radius: 50px;
+	text-align: center;
+}
+.result-para {
+	text-align: center;
+	font-weight: var(--fw-700);
+}
+.result-para h1 {
+	margin: 1rem 0;
+	color: var(--white);
+	font-size: 1.5rem;
+}
+.result-para p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+@media (max-width: 27rem) {
+	.result-para p {
+		font-size: 0.8rem;
+	}
+}
